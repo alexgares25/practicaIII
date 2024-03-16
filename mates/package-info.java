@@ -1,4 +1,4 @@
-//**
-  * La clase Matematicas contiene la logica para la aproximacion PI mediante el metodo de Montecarlo.
-  */
+/**
+ * La clase Matematicas contiene la lógica para la aproximación de Pi mediante el método de Montecarlo.
+ */
 package mates;
