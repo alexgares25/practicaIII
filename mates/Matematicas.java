@@ -1,9 +1,18 @@
 package mates;
 import java.util.Random;
 
-
+/**
+ * Clase que proporciona métodos matemáticos para la aproximación del número pi.
+ */
 public class Matematicas {
-
+	
+	/**
+	* Aproxima el valor de pi utilizando el método de Montecarlo.
+	*
+	* @param numIntentos El número de intentos o puntos generados para la aproximación.
+	* @return Una aproximación del valor de pi.
+	*/
+	
 	public static double aproximarPI(long numIntentos) {
 		Random random = new Random();
 		long puntosAcierto = 0;
