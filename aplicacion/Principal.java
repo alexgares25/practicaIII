@@ -10,10 +10,10 @@ public class Principal {
 
     /**
      * Método principal que se ejecuta al iniciar el programa.
-     * Acepta un argumento de línea de comandos que representa el número de pasos
+     * Acepta un argumento de línea de comandos que representa el número de intentos
      * para la estimación de pi mediante el método de Montecarlo.
      *
-     * @param args Argumentos de línea de comandos. Se espera un único argumento: el número de pasos.
+     * @param args Argumentos de línea de comandos. Se espera un único argumento: el número de intentos.
      */
     public static void main(String[] args) {
         if (args.length != 1) {
