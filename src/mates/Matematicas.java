@@ -14,7 +14,6 @@ public class Matematicas {
     public static double aproximarPILambda(long numIntentos) {
         Random random = new Random();
 
-        // Contar cuántos puntos aleatorios caen dentro del círculo
         long puntosAcierto = LongStream.range(0, numIntentos)
                 .filter(i -> {
                     double x = random.nextDouble();
