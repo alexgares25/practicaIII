@@ -1,3 +1,5 @@
+package mates;
+
 import java.util.Random;
 import java.util.stream.LongStream;
 

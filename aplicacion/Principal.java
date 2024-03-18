@@ -23,6 +23,6 @@ public class Principal {
 
         long numIntentos = Long.parseLong(args[0]);
 
-        System.out.println("El número PI es " + Matematicas.aproximarPI(numIntentos));
+        System.out.println("El número PI es " + Matematicas.aproximarPILambda(numIntentos));
     }
 }
