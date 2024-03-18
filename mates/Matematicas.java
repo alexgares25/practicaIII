@@ -1,32 +1,26 @@
-package mates;
 import java.util.Random;
+import java.util.stream.LongStream;
 
-/**
- * Clase que proporciona métodos matemáticos para la aproximación del número pi.
- */
 public class Matematicas {
-	
-	/**
-	* Aproxima el valor de pi utilizando el método de Montecarlo.
-	*
-	* @param numIntentos El número de intentos o puntos generados para la aproximación.
-	* @return Una aproximación del valor de pi.
-	*/
-	
-	public static double aproximarPI(long numIntentos) {
-		Random random = new Random();
-		long puntosAcierto = 0;
 
-		for (long i = 0;i<numIntentos; i++) {
-			double x = random.nextDouble();
-			double y = random.nextDouble();
-			if ( x * x + y * y <=1){
-				puntosAcierto++;
-			}
-		}
+    /**
+     * Aproxima el valor de pi utilizando el método de Montecarlo y expresiones lambda.
+     *
+     * @param numIntentos El número de intentos o puntos generados para la aproximación.
+     * @return Una aproximación del valor de pi.
+     */
+    public static double aproximarPILambda(long numIntentos) {
+        Random random = new Random();
 
+        // Contar cuántos puntos aleatorios caen dentro del círculo
+        long puntosAcierto = LongStream.range(0, numIntentos)
+                .filter(i -> {
+                    double x = random.nextDouble();
+                    double y = random.nextDouble();
+                    return x * x + y * y <= 1;
+                })
+                .count();
 
-
-		return 4.0 * puntosAcierto/numIntentos;
-	}
+        return 4.0 * puntosAcierto / numIntentos;
+    }
 }
